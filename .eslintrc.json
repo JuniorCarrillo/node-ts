@@ -1,0 +1,64 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "./tsconfig.json",
+    "warnOnUnsupportedTypeScriptVersion": false
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "semi": ["error", "always"],
+    "quotes": ["error", "double"],
+    "space-infix-ops": "error",
+    "curly": ["error", "all"],
+    "eol-last": ["error", "always"],
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-var": "error",
+    "prefer-const": "error",
+    "prefer-arrow-callback": "error",
+    "no-async-promise-executor": "error",
+    "no-implicit-coercion": "error",
+    "no-duplicate-imports": "error",
+    "no-new-func": "error",
+    "no-new-object": "error",
+    "no-new-wrappers": "error",
+    "no-throw-literal": "error",
+    "no-useless-escape": "error",
+    "no-useless-call": "error",
+    "prefer-template": "error",
+    "prefer-spread": "error",
+    "no-eval": "error",
+    "no-implied-eval": "error",
+    "no-restricted-syntax": [
+      "error",
+      "WithStatement"
+    ],
+    "no-void": "error",
+    "no-continue": "error",
+    "no-prototype-builtins": "error",
+    "no-useless-return": "error",
+    "no-shadow": ["error", { "hoist": "all" }],
+    "no-redeclare": "error",
+    "no-mixed-operators": "error",
+    "array-callback-return": "error",
+    "consistent-return": "error",
+    "default-case": "error",
+    "default-case-last": "error",
+    "no-alert": "error",
+    "no-else-return": "error",
+    "no-implicit-globals": "error",
+    "no-unused-expressions": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
+  },
+  "ignorePatterns": ["coverage", "dist", "node_modules"]
+}

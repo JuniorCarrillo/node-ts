@@ -1,16 +1,16 @@
-import { rootHandler, server } from '../app';
+import { rootHandler, server } from "../app";
 
-describe('GET /', () => {
+describe("GET /", () => {
   afterAll((done) => {
     server.close(done);
   });
 
-  it('should return the correct message', (done) => {
-    const req = { method: 'GET', url: '/' };
+  it("should return the correct message", (done) => {
+    const req = { method: "GET", url: "/" };
     const res = {
       send: (message) => {
         try {
-          expect(message).toBe('The sedulous hyena ate the antelope!');
+          expect(message).toBe("The sedulous hyena ate the antelope!");
           done();
         } catch (error) {
           done(error);
