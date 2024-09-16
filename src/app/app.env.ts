@@ -1,9 +1,9 @@
 import * as dotenv from 'dotenv';
-import schema from './app.schema';
+import appSchema from './app.schema';
 
 dotenv.config();
 
-const { error, value: env } = schema.validate(process.env,
+const { error, value: env } = appSchema.validate(process.env,
 	{ abortEarly: false }
 );
 
