@@ -2,15 +2,65 @@
 
 ## Description
 
-Este es un proyecto de esqueleto que permite utilizarlo para proyectos que requieran el uso de Node con TypeScript. La solucion esta inicialmente pensada para uso general, pero provee de capacidades de unit testing, http y manejo de variables de entorno.
+This is a skeleton project intended for projects requiring the use of Node with TypeScript. The solution is initially designed for general use but provides capabilities for unit testing, HTTP, and environment variable management.
 
-### Libreries
+### Libraries
 
-Este proyecto contiene principalmente las siguientes librerias y elementos.
+This project primarily includes the following libraries and elements.
 
 ## Installation
 
-Step-by-step instructions on how to install the project. For example:
+Follow these steps to set up the project on your local machine:
+
+1. **Clone the repository**  
+   Clone the project repository from GitHub:
+
+   ```bash
+   git clone https://github.com/JuniorCarrillo/nodets.git
+   cd nodets
+    ```
+   
+2. **Install the dependencies**
+   Install the project dependencies using npm:
+
+   ```bash
+   npm install
+   ```
+
+3. **Configure environment variables**
+   Create a `.env` file in the `src/app` directory and define your environment variables as needed. Here's an example:
+
+   ```bash
+    PORT=3000
+    NODE_ENV=development
+   ```
+
+4. **Start the project**
+   Start the project using the following command:
+
+   ```bash
+   npm start
+   ```
+
+    The server should now be running at `http://localhost:3000`.   
+ 
+5. **Run the tests**
+   To run the unit tests, use:
+
+   ```bash
+   npm test
+   ```
+
+   This command will run all the tests in the `src/test` directory.
+
+6. **Build the project**
+    To build the project, use:
+    
+    ```bash
+    npm run build
+    ```
+    
+    This command will compile the TypeScript code into JavaScript and place it in the `dist` directory.
 
 ## Usage
 
@@ -55,7 +105,6 @@ const server = main.listen(env.port, () => {
 });
 
 export { rootHandler, server };
-
 ```
 
 ## Contribution
@@ -70,14 +119,36 @@ Guide to contribute to the project. For example:
 
 ## License
 
-Information about the project's license. For example:
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the BSD 3-Clause License. See the LICENSE file for more details.
 
 ## Project Diagram
 
 Below is a flow diagram representing the main elements of the project:
 
-## Project Diagram
+``` mermaid
+graph TD;
+    A[Root] --> B[Dockerfile];
+    A --> C[LICENSE];
+    A --> D[package.json];
+    A --> E[package-lock.json];
+    A --> F[README.md];
+    A --> G[src];
+    A --> H[tsconfig.json];
+    A --> I[tslint.json];
 
-Below is a flow diagram representing the main elements of the project:
+    G --> J[app];
+    G --> K[index.ts];
+    G --> L[test];
+
+    J --> M[app.env.ts];
+    J --> N[app.logger.ts];
+    J --> O[app.schema.ts];
+    J --> P[assets];
+    J --> Q[index.ts];
+    J --> R[infrastructure];
+    J --> S[main.ts];
+    J --> T[scripts];
+    J --> U[templates];
+
+    L --> V[main.spec.ts];
+```
