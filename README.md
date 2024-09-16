@@ -24,7 +24,7 @@ Follow these steps to set up the project on your local machine:
    Install the project dependencies using npm:
 
    ```bash
-   npm install
+   npm install --legacy-peer-deps
    ```
 
 3. **Configure environment variables**
