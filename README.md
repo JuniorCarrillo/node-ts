@@ -22,24 +22,39 @@ npm start
 
 This command will start the project with the default configuration:
 
+- [https://jestjs.io/](Jest) for unit testing
+- [https://expressjs.com/](Express) for HTTP server
+- [https://www.npmjs.com/package/dotenv](Dotenv) for environment variables
+- [https://www.npmjs.com/package/winston](Winston) for logging
+- [https://www.typescriptlang.org/](TypeScript) for code compilation
+- [https://eslint.org/](Eslint) for code linting
+- [https://prettier.io/](Prettier) for code formatting
+- [https://www.npmjs.com/package/husky](Husky) for pre-commit hooks
+- [https://nodemon.io/](Nodemon) for development server
+- [https://www.npmjs.com/package/ts-node](Ts-node) for TypeScript Node integration
+
+## Examples
+
+El main.ts es el archivo principal de la aplicacion, en el se puede ver un ejemplo de como se puede utilizar el proyecto.
+
 ``` typescript
-import express from 'express';
-import 'dotenv/config';
+import express from "express";
+import env from "./app.env";
+import logger from "./app.logger";
 
-const app = express();
-const port = process.env.PORT || 3000;
+const main = express();
 
-const rootHandler = (req, res) => {
-  res.send('The sedulous hyena ate the antelope!');
+const rootHandler = (req: express.Request, res: express.Response) => {
+  res.send("The sedulous hyena ate the antelope!");
 };
 
-app.get('/', rootHandler);
+main.get("/", rootHandler);
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+const server = main.listen(env.port, () => {
+  logger.info(`Server is running on port ${env.port}`);
 });
 
-export { rootHandler };
+export { rootHandler, server };
 
 ```
 
