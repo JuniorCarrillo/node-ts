@@ -1,10 +1,17 @@
 import express from 'express';
+import 'dotenv/config';
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
+const rootHandler = (req, res) => {
   res.send('The sedulous hyena ate the antelope!');
+};
+
+app.get('/', rootHandler);
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
 
-app.listen(port);
+export { rootHandler };
