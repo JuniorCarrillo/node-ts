@@ -72,20 +72,20 @@ npm start
 
 This command will start the project with the default configuration:
 
-- [https://jestjs.io/](Jest) for unit testing
-- [https://expressjs.com/](Express) for HTTP server
-- [https://www.npmjs.com/package/dotenv](Dotenv) for environment variables
-- [https://www.npmjs.com/package/winston](Winston) for logging
-- [https://www.typescriptlang.org/](TypeScript) for code compilation
-- [https://eslint.org/](Eslint) for code linting
-- [https://prettier.io/](Prettier) for code formatting
-- [https://www.npmjs.com/package/husky](Husky) for pre-commit hooks
-- [https://nodemon.io/](Nodemon) for development server
-- [https://www.npmjs.com/package/ts-node](Ts-node) for TypeScript Node integration
+- [Jest](https://jestjs.io/) for unit testing
+- [Express](https://expressjs.com/) for HTTP server
+- [DotEnv](https://www.npmjs.com/package/dotenv) for environment variables
+- [Winston](https://www.npmjs.com/package/winston) for logging
+- [TypeScript](https://www.typescriptlang.org/) for code compilation
+- [Eslint](https://eslint.org/) for code linting
+- [Prettier](https://prettier.io/) for code formatting
+- [Husky](https://www.npmjs.com/package/husky) for pre-commit hooks
+- [Nodemon](https://nodemon.io/) for development server
+- [TS-node](https://www.npmjs.com/package/ts-node) for TypeScript Node integration
 
 ## Examples
 
-El main.ts es el archivo principal de la aplicacion, en el se puede ver un ejemplo de como se puede utilizar el proyecto.
+The `main.ts` file is the main application file where an example of how to use the project can be seen.
 
 ``` typescript
 import express from "express";
@@ -127,28 +127,29 @@ Below is a flow diagram representing the main elements of the project:
 
 ``` mermaid
 graph TD;
-    A[Root] --> B[Dockerfile];
-    A --> C[LICENSE];
-    A --> D[package.json];
-    A --> E[package-lock.json];
-    A --> F[README.md];
-    A --> G[src];
-    A --> H[tsconfig.json];
-    A --> I[tslint.json];
+    A[src] --> B[app];
+    A --> C[test];
 
-    G --> J[app];
-    G --> K[index.ts];
-    G --> L[test];
+    B --> D[app.schema.ts];
+    B --> E[app.env.ts];
+    B --> F[app.logger.ts];
+    B --> G[assets];
+    B --> H[infrastructure];
+    B --> I[services];
+    B --> J[scripts];
+    B --> K[templates];
+    B --> L[main.ts];
 
-    J --> M[app.env.ts];
-    J --> N[app.logger.ts];
-    J --> O[app.schema.ts];
-    J --> P[assets];
-    J --> Q[index.ts];
-    J --> R[infrastructure];
-    J --> S[main.ts];
-    J --> T[scripts];
-    J --> U[templates];
+    D --> M[Defines and validates environment variable schema];
+    E --> N[Validates environment variables using app.schema.ts];
+    F --> O[Handles logs, called from main.ts];
+    G --> P[Publicly exposed elements like images and audio];
+    H --> Q[Connects to databases, S3, and similar elements];
+    I --> R[Connects to external APIs via HTTP];
+    J --> S[Used for running ORM and similar tasks];
+    K --> T[Templates for Handlebars, emails, etc.];
 
-    L --> V[main.spec.ts];
+    L --> U[Example of how these components interact];
+    C --> V[*.spec.ts files are found in the same directory structure as in src/app];
+    V --> W[main.spec.ts];
 ```
