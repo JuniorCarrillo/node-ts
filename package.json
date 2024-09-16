@@ -60,6 +60,7 @@
       "!**/app.(t|j)s",
       "!**/*.env.(t|j)s",
       "!**/*.schema.(t|j)s",
+      "!**/*.logger.(t|j)s",
       "!**/*.module.(t|j)s"
     ],
     "coverageDirectory": "../coverage",
