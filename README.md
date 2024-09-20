@@ -1,8 +1,12 @@
 # NodeTS
 
-![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
 ![Master](https://github.com/JuniorCarrillo/nodets/actions/workflows/test-coverage.yml/badge.svg?branch=master)
 ![Develop](https://github.com/JuniorCarrillo/nodets/actions/workflows/test-coverage.yml/badge.svg?branch=develop)
+![Coverage branches](./.badges/coverage-branches.svg)
+![Coverage functions](./.badges/coverage-functions.svg)
+![Coverage jest coverage](./.badges/coverage-jest coverage.svg)
+![Coverage lines](./.badges/coverage-lines.svg)
+![Coverage statements](./.badges/coverage-statements.svg)
 [![GitHub release](https://img.shields.io/github/release/JuniorCarrillo/nodets?include_prereleases=&sort=semver&color=blue)](https://github.com/JuniorCarrillo/nodets/releases/)
 [![License](https://img.shields.io/badge/License-BSD_3--Clause_License-blue)](#license)
 [![issues - nodets](https://img.shields.io/github/issues/JuniorCarrillo/nodets)](https://github.com/JuniorCarrillo/nodets/issues)
