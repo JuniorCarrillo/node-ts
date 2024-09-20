@@ -41,6 +41,6 @@ jobs:
         uses: ArtiomTr/jest-coverage-report-action@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          coverage-file: ./coverage/coverage-summary.json
-          base-coverage-file: ./coverage/master/coverage-summary.json
+          coverage-file: ${{ github.workspace }}/coverage/coverage-summary.json
+          base-coverage-file: ${{ github.workspace }}/coverage/master/coverage-summary.json
           output: comment, report-markdown
