@@ -41,4 +41,4 @@ jobs:
           summary-title: Report of coverage tests generated from GitHub Actions
           badge-title: Coverage
           create-new-comment: true
-          coverage-summary-path: ${{ github.workspace }}/home/runner/work/nodets/nodets/coverage/coverage-summary.json
+          coverage-summary-path: ./coverage/coverage-summary.json
