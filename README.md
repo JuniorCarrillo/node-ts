@@ -1,9 +1,13 @@
 # NodeTS
 
-![Coverage](https://img.shields.io/badge/Coverage-0%25-brightgreen)
+![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
 ![Master](https://github.com/JuniorCarrillo/nodets/actions/workflows/test-coverage.yml/badge.svg?branch=master)
 ![Develop](https://github.com/JuniorCarrillo/nodets/actions/workflows/test-coverage.yml/badge.svg?branch=develop)
-
+[![JuniorCarrillo - nodets](https://img.shields.io/static/v1?label=JuniorCarrillo&message=nodets&color=blue&logo=github)](https://github.com/JuniorCarrillo/nodets "Go to GitHub repo")
+[![stars - nodets](https://img.shields.io/github/stars/JuniorCarrillo/nodets?style=social)](https://github.com/JuniorCarrillo/nodets)
+[![GitHub release](https://img.shields.io/github/release/JuniorCarrillo/nodets?include_prereleases=&sort=semver&color=blue)](https://github.com/JuniorCarrillo/nodets/releases/)
+[![License](https://img.shields.io/badge/License-BSD_3--Clause_License-blue)](#license)
+[![issues - nodets](https://img.shields.io/github/issues/JuniorCarrillo/nodets)](https://github.com/JuniorCarrillo/nodets/issues)
 
 ## Description
 
@@ -122,10 +126,6 @@ Guide to contribute to the project. For example:
 4. Push your changes (`git push origin feature/new-feature`).
 5. Open a Pull Request.
 
-## License
-
-This project is licensed under the BSD 3-Clause License. See the LICENSE file for more details.
-
 ## Project Diagram
 
 Below is a flow diagram representing the main elements of the project:
@@ -158,3 +158,7 @@ graph TD;
     C --> V[*.spec.ts files are found in the same directory structure as in src/app];
     V --> W[main.spec.ts];
 ```
+
+## License
+
+Released under [BSD 3-Clause License](/LICENSE) by [@JuniorCarrillo](https://github.com/JuniorCarrillo).
