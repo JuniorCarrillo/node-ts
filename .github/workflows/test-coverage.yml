@@ -39,3 +39,9 @@ jobs:
           badge-title: Coverage
           create-new-comment: true
           coverage-summary-path: ./coverage/coverage-summary.json
+
+      - name: Generating coverage badges
+        uses: jpb06/jest-badges-action@latest
+        with:
+          coverage-summary-path: ./coverage/coverage-summary.json
+          branches: master,develop
