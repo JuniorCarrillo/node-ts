@@ -1,8 +1,8 @@
 # NodeTS
 
 ![Coverage](https://img.shields.io/badge/Coverage-0%25-brightgreen)
-![Master](https://github.com/JuniorCarrillo/nodets/actions/workflows/test.yml/badge.svg?branch=master)
-![Develop](https://github.com/JuniorCarrillo/nodets/actions/workflows/test.yml/badge.svg?branch=develop)
+![Master](https://github.com/JuniorCarrillo/nodets/actions/workflows/test-coverage.yml/badge.svg?branch=master)
+![Develop](https://github.com/JuniorCarrillo/nodets/actions/workflows/test-coverage.yml/badge.svg?branch=develop)
 
 
 ## Description
