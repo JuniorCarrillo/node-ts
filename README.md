@@ -1,5 +1,10 @@
 # NodeTS
 
+![Coverage](https://img.shields.io/badge/Coverage-0%25-brightgreen)
+![Master](https://github.com/JuniorCarrillo/nodets/actions/workflows/test.yml/badge.svg?branch=master)
+![Develop](https://github.com/JuniorCarrillo/nodets/actions/workflows/test.yml/badge.svg?branch=develop)
+
+
 ## Description
 
 This is a skeleton project intended for projects requiring the use of Node with TypeScript. The solution is initially designed for general use but provides capabilities for unit testing, HTTP, and environment variable management.
