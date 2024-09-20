@@ -29,10 +29,18 @@ jobs:
         run: npm run lint
 
       - name: Run tests with coverage
+        run: npm test:cov
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: coverage
+
+      - name: Generate coverage report
         uses: ArtiomTr/jest-coverage-report-action@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          test-script: npm test
-          coverage-file: ./coverage/report.json
-          base-coverage-file: ./coverage/master/report.json
+          coverage-file: ./coverage/coverage-summary.json
+          base-coverage-file: ./coverage/master/coverage-summary.json
           output: comment, report-markdown
