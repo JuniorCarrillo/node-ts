@@ -29,4 +29,13 @@ jobs:
         run: npm run lint
 
       - name: Run tests with coverage
-        run: npm run test:cov
+        run: npm run test:cov && npm run test:report
+
+      - name: Generate coverage report
+        uses: MishaKav/jest-coverage-comment@main
+        with:
+          title: Test coverage report
+          summary-title: Report of coverage tests generated from GitHub Actions
+          badge-title: Coverage
+          create-new-comment: true
+          coverage-summary-path: ./coverage/coverage-summary.json
