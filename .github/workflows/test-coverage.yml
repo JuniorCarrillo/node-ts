@@ -35,8 +35,8 @@ jobs:
         run: echo "Listing files in workspace:" && ls -R ${{ github.workspace }}
 
       - name: Generate coverage report
-        uses: ArtiomTr/jest-coverage-report-action@v2
+        uses: MishaKav/jest-coverage-comment@main
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          coverage-file: ${{ github.workspace }}/src/coverage/coverage-final.json
-          output: comment, report-markdown
+          title: Test Coverage Report
+          badge-title: Coverage
+          coverage-summary-path: ${{ github.workspace }}/src/coverage/coverage-summary.json
